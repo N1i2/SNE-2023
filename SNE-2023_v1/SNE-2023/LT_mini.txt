@@ -1,0 +1,13 @@
+===========LEX TABLE mini==============
+
+s
+{
+nti;
+nti;
+i=l;
+i=i@1##
+o(i);
+i=ilv;
+o(i);
+rl;
+};

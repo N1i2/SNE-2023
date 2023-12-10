@@ -1,0 +1,46 @@
+little function sum(little w, little d) 
+{
+	check(d < w)?
+	{
+		output('Yes');
+		w = w + d;
+	}
+	not
+	{
+		output('No');
+		w = w - d;
+	}
+	
+	return w;
+}; 
+
+start 
+{
+	new little x; 
+	x = texttolit('5');
+	output(x);
+	x=x+!10;
+	output(x);
+
+	new little o;
+	new little j;
+	j = 14;
+	o = sum(x, j);
+	output(o);
+
+	return 0;
+};
+
+////////////////////////////
+
+start 
+{
+	new little x; 
+	new text h;
+	h = '5';
+	x = texttolit(h);
+	output(x);
+	x= x + !10;
+	output(x);
+	return 0;
+};

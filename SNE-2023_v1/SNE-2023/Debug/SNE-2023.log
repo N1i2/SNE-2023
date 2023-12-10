@@ -1,0 +1,3 @@
+﻿  MFST.cpp
+E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\MFST.cpp(247,66): warning C4267: =: преобразование из "size_t" в "short"; возможна потеря данных
+  SNE-2023.vcxproj -> E:\универ\КПО\kursach\SNE-2023_v1\Debug\SNE-2023.exe

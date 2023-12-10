@@ -1,0 +1,53 @@
+﻿  Assembling ASM.asm...
+ASM.asm(1): error A2008: syntax error : .
+ASM.asm(2): error A2008: syntax error : .
+ASM.asm(17): error A2008: syntax error : .
+ASM.asm(47): error A2070: invalid instruction operands
+ASM.asm(48): error A2070: invalid instruction operands
+ASM.asm(49): error A2070: invalid instruction operands
+ASM.asm(50): error A2070: invalid instruction operands
+ASM.asm(51): error A2070: invalid instruction operands
+ASM.asm(52): error A2070: invalid instruction operands
+ASM.asm(53): error A2070: invalid instruction operands
+ASM.asm(55): error A2070: invalid instruction operands
+ASM.asm(56): error A2070: invalid instruction operands
+ASM.asm(57): error A2070: invalid instruction operands
+ASM.asm(58): error A2070: invalid instruction operands
+ASM.asm(59): error A2070: invalid instruction operands
+ASM.asm(60): error A2070: invalid instruction operands
+ASM.asm(61): error A2070: invalid instruction operands
+ASM.asm(63): error A2070: invalid instruction operands
+ASM.asm(64): error A2070: invalid instruction operands
+ASM.asm(66): error A2070: invalid instruction operands
+ASM.asm(67): error A2070: invalid instruction operands
+ASM.asm(68): error A2070: invalid instruction operands
+ASM.asm(69): error A2070: invalid instruction operands
+ASM.asm(87): error A2070: invalid instruction operands
+ASM.asm(88): error A2070: invalid instruction operands
+ASM.asm(93): error A2070: invalid instruction operands
+ASM.asm(94): error A2070: invalid instruction operands
+ASM.asm(96): error A2070: invalid instruction operands
+ASM.asm(97): error A2070: invalid instruction operands
+ASM.asm(98): error A2070: invalid instruction operands
+ASM.asm(99): error A2070: invalid instruction operands
+ASM.asm(101): error A2070: invalid instruction operands
+ASM.asm(102): error A2070: invalid instruction operands
+ASM.asm(103): error A2070: invalid instruction operands
+ASM.asm(118): error A2070: invalid instruction operands
+ASM.asm(128): error A2070: invalid instruction operands
+ASM.asm(129): error A2070: invalid instruction operands
+ASM.asm(130): error A2070: invalid instruction operands
+ASM.asm(131): error A2070: invalid instruction operands
+ASM.asm(149): error A2070: invalid instruction operands
+ASM.asm(150): error A2070: invalid instruction operands
+ASM.asm(155): error A2070: invalid instruction operands
+ASM.asm(156): error A2070: invalid instruction operands
+ASM.asm(158): error A2070: invalid instruction operands
+ASM.asm(160): error A2070: invalid instruction operands
+ASM.asm(161): error A2070: invalid instruction operands
+ASM.asm(163): error A2070: invalid instruction operands
+ASM.asm(164): error A2070: invalid instruction operands
+ASM.asm(179): error A2070: invalid instruction operands
+ASM.asm(185): error A2008: syntax error : main
+ASM.asm(186): error A2088: END directive required at end of file
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.targets(70,5): error MSB3721: выход из команды "ml64.exe /c /nologo /Zi /Fo"x64\Debug\ASM.obj" /W3 /errorReport:prompt  /TaASM.asm" с кодом "1".

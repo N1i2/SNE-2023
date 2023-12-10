@@ -1,0 +1,12 @@
+Шаг : Правило             Входная лента                 Стек                
+0   : S->s{N};            s{nti;nti;i=l;i=i(i);o(i)     S$                  
+0   : SAVESTATE:          1
+0   :                     s{nti;nti;i=l;i=i(i);o(i)     s{N};$              
+1   :                     {nti;nti;i=l;i=i(i);o(i);     {N};$               
+2   :                     nti;nti;i=l;i=i(i);o(i);i     N};$                
+3   : N->nti;             nti;nti;i=l;i=i(i);o(i);i     N};$                
+3   : SAVESTATE:          2
+3   :                     nti;nti;i=l;i=i(i);o(i);i     nti;};$             
+4   :                     ti;nti;i=l;i=i(i);o(i);i=     ti;};$              
+5   :                     i;nti;i=l;i=i(i);o(i);i=i     i;};$               
+6   :                     ;nti;i=l;i=i(i);o(i);i=iv     ;};$                

@@ -1,0 +1,4 @@
+﻿  Assembling ASM.asm...
+mylib.lib(mylib.obj) : warning LNK4075: не учитывается "/EDITANDCONTINUE" из-за спецификации "/INCREMENTAL:NO"
+LINK : warning LNK4098: библиотека по умолчанию "libucrt.lib" конфликтует с использованием других библиотек; используйте /NODEFAULTLIB:library
+  ASM.vcxproj -> E:\универ\КПО\kursach\SNE-2023_v1\Debug\ASM.exe

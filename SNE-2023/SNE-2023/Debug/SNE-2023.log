@@ -1,0 +1,8 @@
+﻿  Lexer.cpp
+E:\универ\КПО\kursach\SNE-2023\SNE-2023\Graph.h(31,1): warning C4005: FST_VOID: изменение макроопределения
+E:\универ\КПО\kursach\SNE-2023\SNE-2023\Graph.h(23,1): message : см. предыдущее определение "FST_VOID"
+E:\универ\КПО\kursach\SNE-2023\SNE-2023\Lexer.cpp(18,21): warning C4018: <: несоответствие типов со знаком и без знака
+E:\универ\КПО\kursach\SNE-2023\SNE-2023\Lexer.cpp(73,17): warning C4804: -: небезопасное использование типа "bool" в операции
+E:\универ\КПО\kursach\SNE-2023\SNE-2023\Lexer.cpp(13,7): warning C4101: LexIT: неиспользованная локальная переменная
+E:\универ\КПО\kursach\SNE-2023\SNE-2023\Lexer.cpp(406): warning C4715: Lexer::lexAnalis: значение возвращается не при всех путях выполнения
+  SNE-2023.vcxproj -> E:\универ\КПО\kursach\SNE-2023\Debug\SNE-2023.exe

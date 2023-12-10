@@ -1,0 +1,109 @@
+Тест Без ошибок
+---- Протокол ------- Дата: 10.12.2023 20:01:29
+---- Параметры -------
+-log: input.log
+-out: E:\универ\КПО\kursach\SNE-2023_v1\Debug\SNE-2023.exe.asm
+-in: input.txt
+
+
+================LEX TABLE==============
+
+Num      Line   Lexema            ID in IT             value
+
+  0       1       s                   1                    
+  1       2       {                                        
+  2       3       n                                        
+  3       3       t                                       l
+  4       3       i                   2                    
+  5       3       ;                                        
+  6       4       n                                        
+  7       4       t                                       t
+  8       4       i                   3                    
+  9       4       ;                                        
+ 10       5       i                   3                    
+ 11       5       =                                        
+ 12       5       l                   4                    
+ 13       5       ;                                        
+ 14       6       i                   2                    
+ 15       6       =                                        
+ 16       6       i                  -3                   z
+ 17       6       (                                        
+ 18       6       i                   3                    
+ 19       6       )                                        
+ 20       6       ;                                        
+ 21       7       o                                        
+ 22       7       (                                        
+ 23       7       i                   2                    
+ 24       7       )                                        
+ 25       7       ;                                        
+ 26       8       i                   2                    
+ 27       8       =                                        
+ 28       8       i                   2                    
+ 29       8       v                                       +
+ 30       8       l                   5                    
+ 31       8       ;                                        
+ 32       9       o                                        
+ 33       9       (                                        
+ 34       9       i                   2                    
+ 35       9       )                                        
+ 36       9       ;                                        
+ 37      10       r                                        
+ 38      10       l                   6                   z
+ 39      10       ;                                        
+ 40      11       }                                        
+ 41      11       ;                                        
+                  
+
+===========LEX TABLE mini==============
+
+s
+{
+nti;
+nti;
+i=l;
+i=i(i);
+o(i);
+i=ivl;
+o(i);
+rl;
+};
+
+=================ID TABLE==============
+
+      Name           Type         Data type        First in LT                Value         Visibility
+
+  0    buffer       variable         little             -1                        0              0
+  1     start       function         little              0                        0              0
+  2         x       variable         little              4                        0              0 1
+  3         h       variable           text              8                       NV              0 1
+  4        T0        literal           text             12                      '5'              0 1
+  5        L0        literal         little             30                        8              0 1
+  6        L1        literal         little             38                        0              0 1
+
+
+
+
+0   : S->s{N};            
+2   : N->nti;N            
+6   : N->nti;N            
+10  : N->i=E;N            
+12  : E->l                
+14  : N->i=E;N            
+16  : E->i(W)             
+18  : W->i                
+21  : N->o(U);N           
+23  : U->i                
+26  : N->i=E;N            
+28  : E->iM               
+29  : M->vE               
+30  : E->l                
+32  : N->o(U);N           
+34  : U->i                
+37  : N->rU;              
+38  : U->l                
+
+
+======= Исходные данные =====
+Количество символов: 108
+Проигнорировано:     0
+Количество строк:    11

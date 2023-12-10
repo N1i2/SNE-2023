@@ -1,0 +1,23 @@
+Func text hello(numb a,          text b)
+	numb c = a % 7;
+	numb d = toNumber(b);
+
+   	esli(c - d == 2)
+		return "Yes";
+
+		ili
+			return "No";
+		ilid
+	elsed
+FuncD
+
+
+
+Main()
+	numb a = 19;
+	text b = "3";
+
+	text res = hello(a, b);
+
+	Vivod(res);
+MainD
