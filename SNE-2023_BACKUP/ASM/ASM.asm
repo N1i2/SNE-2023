@@ -3,7 +3,6 @@
 
 includelib kernel32.lib
 includelib libucrt.lib
-includelib mylib.lib
 
 ExitProcess PROTO : DWORD
 outtxt PROTO : DWORD

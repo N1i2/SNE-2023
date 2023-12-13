@@ -1,17 +1,3 @@
-﻿  LexAnaliz.cpp
-E:\универ\КПО\kursach\SNE-2023_v2\SNE-2023\LexAnaliz.cpp(124,49): warning C4018: <: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v2\SNE-2023\LexAnaliz.cpp(183,22): warning C4018: <: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v2\SNE-2023\LexAnaliz.cpp(215,33): warning C4018: <: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v2\SNE-2023\LexAnaliz.cpp(465,22): warning C4018: <: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v2\SNE-2023\LexAnaliz.cpp(471,22): warning C4018: <: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v2\SNE-2023\LexAnaliz.cpp(474,7): warning C4018: >=: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v2\SNE-2023\LexAnaliz.cpp(476,22): warning C4018: <: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v2\SNE-2023\LexAnaliz.cpp(478,23): warning C4018: >=: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v2\SNE-2023\LexAnaliz.cpp(532,24): warning C4018: <: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v2\SNE-2023\LexAnaliz.cpp(534,33): warning C4018: >=: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v2\SNE-2023\LexAnaliz.cpp(538,24): warning C4018: <: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v2\SNE-2023\LexAnaliz.cpp(540,37): warning C4018: >=: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v2\SNE-2023\LexAnaliz.cpp(574,24): warning C4018: <: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v2\SNE-2023\LexAnaliz.cpp(577,37): warning C4018: >=: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v2\SNE-2023\LexAnaliz.cpp(641,25): warning C4018: <: несоответствие типов со знаком и без знака
+﻿  Generation.cpp
+E:\универ\КПО\kursach\SNE-2023_v2\SNE-2023\Generation.cpp(204,80): warning C4129: p: неизвестная escape-последовательность
   SNE-2023.vcxproj -> E:\универ\КПО\kursach\SNE-2023_v2\Debug\SNE-2023.exe

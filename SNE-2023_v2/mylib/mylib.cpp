@@ -7,11 +7,6 @@
 
 extern "C"
 {
-	char* _stdcall copytxt(char* str1, char* str2)
-	{
-		return strcpy(str1, str2);
-	}
-
 	int _stdcall texttolit(char* str1)
 	{
 		int result = 0;
@@ -30,6 +25,11 @@ extern "C"
 			i++;
 		}
 		return i;
+	}
+
+	char* _stdcall copytxt(char* str1, char* str2)
+	{
+		return strcpy(str1, str2);
 	}
 
 	int _stdcall sleep() {

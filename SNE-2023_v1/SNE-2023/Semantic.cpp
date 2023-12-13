@@ -10,28 +10,6 @@ namespace Semantic
 		for (int i = 0; i < myTables.mylextable.size; i++) {
 			switch (myTables.mylextable.table[i].lexema)
 			{
-			case LEX_FROM:
-				if (myTables.myidtable.table[myTables.mylextable.table[i + 2].idxTI].iddatatype != IT::LIT ||
-					myTables.myidtable.table[myTables.mylextable.table[i + 6].idxTI].iddatatype != IT::LIT)
-					throw ERROR_THROW_IN(163, myTables.mylextable.table[i].sn, 0);
-				k = i;
-				while (myTables.mylextable.table[++k].lexema == LEX_RIGHTBRACE &&
-					counter == 1)
-					switch (myTables.mylextable.table[k].lexema)
-					{
-					case LEX_FROM:
-						throw ERROR_THROW_IN(168, myTables.mylextable.table[k].sn, 0);
-						break;
-					case LEX_LEFTBRACE:
-						counter++;
-						break;
-					case LEX_RIGHTBRACE:
-						counter--;
-						break;
-					default:
-						break;
-					}
-				break;
 			case LEX_EQUAL:
 			{
 				if (myTables.mylextable.table[i - 3].lexema == LEX_CHECK)
@@ -112,7 +90,8 @@ namespace Semantic
 				if (myTables.mylextable.table[i + 1].idxTI != TI_NULLIDX)
 				{
 					if (myTables.mylextable.table[i + 1].lexema != LEX_LEFTTHESIS)
-						if (myTables.myidtable.table[myTables.mylextable.table[i + 1].idxTI].iddatatype == IT::LIT && myTables.myidtable.table[myTables.mylextable.table[i + 1].idxTI].idtype == IT::L)
+						if (myTables.myidtable.table[myTables.mylextable.table[i + 1].idxTI].iddatatype == IT::LIT &&
+							myTables.myidtable.table[myTables.mylextable.table[i + 1].idxTI].idtype == IT::L)
 							if (myTables.myidtable.table[myTables.mylextable.table[i + 1].idxTI].value.vint == 0)
 								throw ERROR_THROW_IN(2, myTables.mylextable.table[i].sn, 0);
 				}

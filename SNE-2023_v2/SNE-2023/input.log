@@ -1,7 +1,134 @@
 Тест Без ошибок
----- Протокол ------- Дата: 10.12.2023 15:09:32
+---- Протокол ------- Дата: 12.12.2023 23:16:53
 ---- Параметры -------
 -log: input.log
 -out: E:\универ\КПО\kursach\SNE-2023_v2\Debug\SNE-2023.exe.asm
 -in: input.txt
-Ошибка 153: SEMANTICS: Используется не объявленная переменная, строка 5, позиция 0
+
+
+================LEX TABLE==============
+
+Num      Line   Lexema            ID in IT             value
+
+  0       1       s                   1                    
+  1       2       {                                        
+  2       3       n                                        
+  3       3       t                                       l
+  4       3       i                   2                    
+  5       3       ;                                        
+  6       4       i                   2                    
+  7       4       =                                        
+  8       4       i                   2                    
+  9       4       v                                       *
+ 10       4       l                   3                    
+ 11       4       v                                       +
+ 12       4       l                   4                    
+ 13       4       ;                                        
+ 14       5       o                                        
+ 15       5       (                                        
+ 16       5       i                   2                    
+ 17       5       )                                        
+ 18       5       ;                                        
+ 19       6       n                                        
+ 20       6       t                                       t
+ 21       6       i                   5                    
+ 22       6       ;                                        
+ 23       7       i                   5                    
+ 24       7       =                                        
+ 25       7       l                   6                    
+ 26       7       ;                                        
+ 27       8       i                   2                    
+ 28       8       =                                        
+ 29       8       i                  -3                   z
+ 30       8       (                                        
+ 31       8       i                   5                    
+ 32       8       )                                        
+ 33       8       ;                                        
+ 34       9       o                                        
+ 35       9       (                                        
+ 36       9       i                   2                    
+ 37       9       )                                        
+ 38       9       ;                                        
+ 39      10       i                   2                    
+ 40      10       =                                        
+ 41      10       i                   2                    
+ 42      10       v                                       +
+ 43      10       l                   7                    
+ 44      10       ;                                        
+ 45      11       o                                        
+ 46      11       (                                        
+ 47      11       i                   2                    
+ 48      11       )                                        
+ 49      11       ;                                        
+ 50      12       r                                        
+ 51      12       l                   8                    
+ 52      12       ;                                        
+ 53      13       }                                        
+ 54      13       ;                                        
+                  
+
+===========LEX TABLE mini==============
+
+s
+{
+nti;
+i=ivlvl;
+o(i);
+nti;
+i=l;
+i=i(i);
+o(i);
+i=ivl;
+o(i);
+rl;
+};
+
+=================ID TABLE==============
+
+      Name           Type         Data type        First in LT                Value         Visibility
+
+  0    buffer       variable         little             -1                        0              0
+  1     start       function         little              0                        0              0
+  2         x       variable         little              4                        0              0 1
+  3        L0        literal         little             10                        2              0 1
+  4        L1        literal         little             12                        2              0 1
+  5         h       variable           text             21                       NV              0 1
+  6        T0        literal           text             25                      '5'              0 1
+  7        L2        literal         little             43                        8              0 1
+  8        L3        literal         little             51                        0              0 1
+
+
+
+
+0   : S->s{N};            
+2   : N->nti;N            
+6   : N->i=E;N            
+8   : E->iM               
+9   : M->vE               
+10  : E->lM               
+11  : M->vE               
+12  : E->l                
+14  : N->o(U);N           
+16  : U->i                
+19  : N->nti;N            
+23  : N->i=E;N            
+25  : E->l                
+27  : N->i=E;N            
+29  : E->i(W)             
+31  : W->i                
+34  : N->o(U);N           
+36  : U->i                
+39  : N->i=E;N            
+41  : E->iM               
+42  : M->vE               
+43  : E->l                
+45  : N->o(U);N           
+47  : U->i                
+50  : N->rU;              
+51  : U->l                
+
+
+======= Исходные данные =====
+Количество символов: 130
+Проигнорировано:     0
+Количество строк:    13

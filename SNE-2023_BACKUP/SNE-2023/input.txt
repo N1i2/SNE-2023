@@ -1,32 +1,63 @@
-little function sum(little w, little d) 
+text function iftest(little f, little s)
 {
-	check(w > d)?
+new text res;
+^f = s;
+	check(f = s)?
 	{
-		output('Yes');
-		w = w + d;
+		res = 'Yes';
 	}
 	not
 	{
-		output('No');
-		w = w - d;
+		res = 'No';
 	}
-	
-	return w;
-}; 
+
+return res;
+};
 
 start 
 {
-	new little x; 
-	x = texttolit('5');
-	output(x);
-	x=x+!10;
-	output(x);
+new little f;
+new little s;
+new little summa;
+new little raznost;
+new little proizv;
+new little delen;
+new little ostdelen;
+new little octo;
+new little oftext;
 
-	new little o;
-	new little j;
-	j = 14;
-	o = sum(x, j);
-	output(o);
+new text tonumb;
+tonumb = '3';
 
-	return 0;
+f = 13;
+s = 7;
+
+summa = f + s;
+raznost = f - s;
+proizv = f * s;
+delen = f / s;
+ostdelen = f % s;
+octo = !19;
+oftext = texttolit(tonumb);
+output(summa);
+output(raznost);
+output(proizv);
+output(delen);
+output(ostdelen);
+output(octo);
+output(oftext);
+
+check(oftext > 5)?
+{
+	output('Yes');
+}
+not
+{
+	oftext = oftext * 2;
+	output(oftext);
+}
+
+tonumb = iftest(f, s);
+output(tonumb);
+return 0;
 };

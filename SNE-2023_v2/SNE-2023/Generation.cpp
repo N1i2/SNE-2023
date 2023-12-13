@@ -354,12 +354,6 @@ namespace Generation
 							{
 								buffstr += "\tpop eax\n\tpop ebx\n\tadd eax, ebx\n\tpush eax\n";
 							}
-							/*else
-							{
-								buffstr += "\tpop eax\n\tpop ebx\n";
-								buffstr += "\tpush offset buf\n\tpush ebx\n\tpush eax\n";
-								buffstr += "\tcall txtcon\n\tpush eax\n";
-							}*/
 							break;
 						}
 						case '-':

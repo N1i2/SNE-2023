@@ -10,26 +10,6 @@ namespace Semantic
 		for (int i = 0; i < myTables.mylextable.size; i++) {       // семантика проверки
 			switch (myTables.mylextable.table[i].lexema)
 			{
-			case LEX_FROM:
-				if (myTables.myidtable.table[myTables.mylextable.table[i + 2].idxTI].iddatatype != IT::LIT || myTables.myidtable.table[myTables.mylextable.table[i + 6].idxTI].iddatatype != IT::LIT)
-					throw ERROR_THROW_IN(163, myTables.mylextable.table[i].sn, 0);
-				k = i;
-				while(myTables.mylextable.table[++k].lexema==LEX_RIGHTBRACE&&counter==1)
-					switch (myTables.mylextable.table[k].lexema)
-					{
-					case LEX_FROM:
-						throw ERROR_THROW_IN(168, myTables.mylextable.table[k].sn,0);
-						break;
-					case LEX_LEFTBRACE:
-						counter++;
-						break;
-					case LEX_RIGHTBRACE	:
-						counter--;
-						break;
-					default:
-						break;
-					}
-				break;
 			case LEX_EQUAL:            //проверка на соответсвие типов в выражении
 			{
 				if (myTables.mylextable.table[i - 3].lexema == LEX_CHECK) {
@@ -157,7 +137,7 @@ namespace Semantic
 			}
 
 
-			if (myTables.mylextable.table[i].idxTI != LT_TI_NULLIDX)    //!!!!!!Работает тольк после синтаксического анализа!!!!!!!!!!
+			if (myTables.mylextable.table[i].idxTI != LT_TI_NULLIDX)  
 			{
 				if (myTables.myidtable.table[myTables.mylextable.table[i].idxTI].idtype == IT::F)
 				{

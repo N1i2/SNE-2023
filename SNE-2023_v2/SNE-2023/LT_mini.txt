@@ -3,11 +3,13 @@
 s
 {
 nti;
+i=ilvlv;
+o(i);
 nti;
 i=l;
-i=i(i);
+i=i@1##
 o(i);
-i=ivl;
+i=ilv;
 o(i);
 rl;
 };

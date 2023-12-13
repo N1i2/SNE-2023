@@ -25,6 +25,7 @@ int _tmain(int argc, _TCHAR ** argv)
 		MFST::Mfst mfst(myTables, GRB::getGreibach());
 		if (!mfst.start(filetrace))
 			throw ERROR_THROW(136);
+
 		filetrace << "\n\n";
 		mfst.savededucation();
 		mfst.printrules(log);

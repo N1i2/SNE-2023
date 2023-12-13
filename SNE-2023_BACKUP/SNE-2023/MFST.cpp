@@ -113,7 +113,9 @@ namespace MFST
 
 	bool Mfst::push_chain(GRB::Rule::Chain chain)
 	{
-		for (int k = chain.size - 1; k >= 0; k--) st.push(chain.nt[k]);
+		for (int k = chain.size - 1; k >= 0; k--) 
+			st.push(chain.nt[k]);
+
 		return true;
 	};
 
@@ -153,7 +155,8 @@ namespace MFST
 		if (rc = (k < MFST_DIAGN_NUMBER))
 		{
 			diagnosis[k] = MfstDiagnosis(lenta_position, prc_step, nrule, nrulechain);
-			for (short j = k + 1; j < MFST_DIAGN_NUMBER; j++) diagnosis[j].lenta_position = -1;
+			for (short j = k + 1; j < MFST_DIAGN_NUMBER; j++) 
+				diagnosis[j].lenta_position = -1;
 		};
 		return rc;
 	};
@@ -220,7 +223,7 @@ namespace MFST
 		{
 			errid = grebach.getRule(diagnosis[n].nrule).iderror;
 			Error::ERROR err = Error::geterror(errid);
-			sprintf_s(buf, MFST_DIAGN_MAXSIZE, "%d: строка %d, %s", err.id, lex.mylextable.table[lpos].sn, err.message);
+			sprintf_s(buf, MFST_DIAGN_MAXSIZE, "%d: строка %d, %s", err.id, lex.mylextable.table[lpos].sn+1, err.message);
 			rc = buf;
 		};
 		return rc;

@@ -570,7 +570,7 @@ namespace LexA
 							int digitValue = str[i] - '0';
 
 							if (digitValue < 0 || digitValue > 7)
-								throw ERROR_THROW_IN(113, currentLine, 0);
+								throw ERROR_THROW_IN(120, currentLine+1, 0);
 
 							decimalNumber = decimalNumber * 8 + digitValue;
 						}
