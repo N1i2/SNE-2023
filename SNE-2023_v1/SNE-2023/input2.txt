@@ -104,6 +104,9 @@ not
 	output(oftext);
 }
 
+summa = 13 + (7 - 4) * 3;
+output(summa); 
+
 tonumb = iftest(f, s);
 output(tonumb);
 return 0;

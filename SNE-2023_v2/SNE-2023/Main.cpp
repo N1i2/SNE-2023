@@ -45,11 +45,11 @@ int _tmain(int argc, _TCHAR ** argv)
 		Log::WriteIn(log, in);
 		Log::Close(log);
 
-		std::cout << "All" << std::endl;
+		std::cout << "All correct" << std::endl;
 	}
 	catch (Error::ERROR e)
 	{
-		std::cout << "Not" << std::endl;
+		std::cout << "Error" << std::endl;
 
 		Log::WriteError(log, e);
 		return -1;

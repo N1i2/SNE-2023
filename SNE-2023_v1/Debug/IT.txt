@@ -1,0 +1,24 @@
+=================ID TABLE==============
+
+      Name           Type         Data type        First in LT                Value         Visibility
+
+  0    buffer       variable         little             -1                        0              0
+  1    iftest       function           text              2                       NV              0
+  2         f      parameter         little              5                        0              0 1
+  3         s      parameter         little              8                        0              0 1
+  4       res       variable           text             13                       NV              0 1
+  5        T0        literal           text             29                    'Yes'              0 1 2
+  6        T1        literal           text             36                     'No'              0 1 3
+  7     start       function         little             44                        0              0
+  8         f       variable         little             48                        0              0 4
+  9         s       variable         little             52                        0              0 4
+ 10     value       variable         little             56                        0              0 4
+ 11    tonumb       variable           text             60                       NV              0 4
+ 12        T2        literal           text             64                      '3'              0 4
+ 13        L0        literal         little             68                       13              0 4
+ 14        L1        literal         little             72                        7              0 4
+ 15        L2        literal         little            131                       15              0 4
+ 16        L3        literal         little            154                        5              0 4
+ 17        T3        literal           text            160                    'Yes'              0 4 5
+ 18        L4        literal         little            169                        2              0 4 6
+ 19        L5        literal         little            193                        0              0 4

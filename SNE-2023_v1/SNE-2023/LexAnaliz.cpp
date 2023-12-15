@@ -41,8 +41,8 @@ namespace LexA
 	}automats;
 
 	unsigned char buff_name[ID_MAXSIZE];
-	unsigned char buff_name_str[ID_MAXSIZE];
-	std::string standartFunction[] = { "textlenght",  "texttolit" };
+	unsigned char buff_name_str[257];
+	std::string standartFunction[] = { "textlenght",  "texttolit" };;//id -2, -3
 	bool isAStandartFunction = false;
 	int counterOfAreaOfVisibility = 0;
 	int counterOfBracket = 0;
@@ -278,10 +278,9 @@ namespace LexA
 					else
 					{
 						sizeofLit++;
-						if (sizeofLit > 255)
+						if (sizeofLit > 258)
 							throw ERROR_THROW_IN(118, currentLine, 0);
 						onelex[amountOfLex] += fulltext[counter];
-
 					}
 				break;
 			case '\'':
@@ -293,6 +292,12 @@ namespace LexA
 			default:
 				if (!isComent)
 					onelex[amountOfLex] += fulltext[counter];
+				if (isLiteral)
+				{
+					sizeofLit++;
+					if (sizeofLit > 258)
+						throw ERROR_THROW_IN(118, currentLine, 0);
+				}
 				break;
 			}
 		}
@@ -537,6 +542,11 @@ namespace LexA
 				myentryI.idxfirstLE = myTables.mylextable.size;
 				if (str[0] == '\'')
 				{
+					if (str.length() >= 258)
+					{
+						throw ERROR_THROW_IN(118, currentLine, 0);
+					}
+
 					myentryI.value.vstr.len = str.length();
 					for (int i = 0; i < str.length(); i++)
 						myentryI.value.vstr.str[i] = str[i];
@@ -554,6 +564,8 @@ namespace LexA
 				{
 					if (!FST::literalInt((char*)str.c_str()))
 						throw ERROR_THROW_IN(113, currentLine, 0);
+
+					
 
 					if (str[0] == '!')
 					{

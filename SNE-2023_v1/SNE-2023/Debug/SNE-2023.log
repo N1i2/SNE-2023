@@ -1,20 +1,2 @@
-﻿  Error.cpp
-E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\Error.cpp(83,3): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "ERROR_ENTRY_NODEF"
-  LexAnaliz.cpp
-E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\LexAnaliz.cpp(125,49): warning C4018: <: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\LexAnaliz.cpp(187,22): warning C4018: <: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\LexAnaliz.cpp(218,33): warning C4018: <: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\LexAnaliz.cpp(474,22): warning C4018: <: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\LexAnaliz.cpp(480,22): warning C4018: <: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\LexAnaliz.cpp(483,7): warning C4018: >=: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\LexAnaliz.cpp(485,22): warning C4018: <: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\LexAnaliz.cpp(487,23): warning C4018: >=: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\LexAnaliz.cpp(541,24): warning C4018: <: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\LexAnaliz.cpp(543,33): warning C4018: >=: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\LexAnaliz.cpp(547,24): warning C4018: <: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\LexAnaliz.cpp(549,37): warning C4018: >=: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\LexAnaliz.cpp(585,24): warning C4018: <: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\LexAnaliz.cpp(588,37): warning C4018: >=: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\LexAnaliz.cpp(653,25): warning C4018: <: несоответствие типов со знаком и без знака
-  Создание кода...
+﻿  LT.cpp
   SNE-2023.vcxproj -> E:\универ\КПО\kursach\SNE-2023_v1\Debug\SNE-2023.exe

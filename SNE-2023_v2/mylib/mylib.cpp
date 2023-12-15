@@ -21,7 +21,6 @@ extern "C"
 		int i=0;
 		while (*(str1 + i) != NULL)
 		{
-			
 			i++;
 		}
 		return i;

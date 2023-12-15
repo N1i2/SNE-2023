@@ -35,7 +35,6 @@ namespace Semantic
 				{
 					if (myTables.mylextable.table[j].lexema == LEX_OPERATOR &&
 						isText)
-						if (myTables.mylextable.table[j].value != '+')
 							throw ERROR_THROW_IN(164, myTables.mylextable.table[j].sn, 0);
 					if (myTables.mylextable.table[j].lexema == POLISHFUNCTION)
 					{

@@ -21,7 +21,6 @@ namespace Semantic
 				int j = i;
 				bool isText = false;
 				IT::IDDATATYPE mainType;
-				//if (myTables.mylextable.table[i - 1].value == LEX_LIBFUNCTION) 
 
 				mainType = myTables.myidtable.table[myTables.mylextable.table[i - 1].idxTI].iddatatype;
 				std::stack<IT::IDDATATYPE> tempStack;
@@ -214,7 +213,8 @@ namespace Semantic
 					bool flag = false;
 					for (int q = 0; q < 8; q++)
 					{
-						if ((typeParamMainFunc[q] == IT::Err&&typeParamObsFunc[q] != IT::Err) || (typeParamMainFunc[q] != IT::Err&&typeParamObsFunc[q] == IT::Err))
+						if ((typeParamMainFunc[q] == IT::Err&&typeParamObsFunc[q] != IT::Err) ||
+							(typeParamMainFunc[q] != IT::Err&&typeParamObsFunc[q] == IT::Err))
 							throw ERROR_THROW_IN(156, myTables.mylextable.table[i].sn, 0);
 
 						if ((typeParamMainFunc[q] != typeParamObsFunc[q]))
