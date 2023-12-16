@@ -41,8 +41,8 @@ namespace LexA
 	}automats;
 
 	unsigned char buff_name[ID_MAXSIZE];
-	unsigned char buff_name_str[ID_MAXSIZE];
-	std::string standartFunction[] = { "textlenght",  "texttolit" };
+	unsigned char buff_name_str[257];
+	std::string standartFunction[] = { "textlenght",  "texttolit" };;//id -2, -3
 	bool isAStandartFunction = false;
 	int counterOfAreaOfVisibility = 0;
 	int counterOfBracket = 0;
@@ -172,7 +172,7 @@ namespace LexA
 			if ((LT::GetEntry(mylextable, mylextable.size - 1)).value == 'l')
 			{
 				iddatatype = IT::LIT;
-				myentryI.value.vint = 0;
+				myentryI.value.vshr = 0;
 			}
 			if ((LT::GetEntry(mylextable, mylextable.size - 1)).value == 't')
 			{
@@ -278,10 +278,9 @@ namespace LexA
 					else
 					{
 						sizeofLit++;
-						if (sizeofLit > 255)
+						if (sizeofLit > 258)
 							throw ERROR_THROW_IN(118, currentLine, 0);
 						onelex[amountOfLex] += fulltext[counter];
-
 					}
 				break;
 			case '\'':
@@ -293,6 +292,12 @@ namespace LexA
 			default:
 				if (!isComent)
 					onelex[amountOfLex] += fulltext[counter];
+				if (isLiteral)
+				{
+					sizeofLit++;
+					if (sizeofLit > 258)
+						throw ERROR_THROW_IN(118, currentLine, 0);
+				}
 				break;
 			}
 		}
@@ -321,7 +326,7 @@ namespace LexA
 		myentryI.iddatatype = IT::LIT;
 		myentryI.idtype = IT::V;
 		myentryI.idxfirstLE = -1;
-		myentryI.value.vint = 0;
+		myentryI.value.vshr = 0;
 		IT::Add(myTables.myidtable, myentryI);
 
 		for (int i = 0; i < amountOfLex; i++) {
@@ -499,7 +504,7 @@ namespace LexA
 					myentryI.id[q] = buff_name[q];
 				myentryI.iddatatype = IT::LIT;
 				myentryI.idtype = IT::F;
-				myentryI.value.vint = 0;
+				myentryI.value.vshr = 0;
 				myentryI.idxfirstLE = myTables.mylextable.size;
 				IT::Add(myTables.myidtable, myentryI);
 				myentryL.idxTI = myTables.myidtable.size - 1;
@@ -537,6 +542,11 @@ namespace LexA
 				myentryI.idxfirstLE = myTables.mylextable.size;
 				if (str[0] == '\'')
 				{
+					if (str.length() >= 258)
+					{
+						throw ERROR_THROW_IN(118, currentLine, 0);
+					}
+
 					myentryI.value.vstr.len = str.length();
 					for (int i = 0; i < str.length(); i++)
 						myentryI.value.vstr.str[i] = str[i];
@@ -555,6 +565,8 @@ namespace LexA
 					if (!FST::literalInt((char*)str.c_str()))
 						throw ERROR_THROW_IN(113, currentLine, 0);
 
+					
+
 					if (str[0] == '!')
 					{
 						int decimalNumber = 0;
@@ -570,15 +582,15 @@ namespace LexA
 							int digitValue = str[i] - '0';
 
 							if (digitValue < 0 || digitValue > 7)
-								throw ERROR_THROW_IN(113, currentLine, 0);
+								throw ERROR_THROW_IN(120, currentLine+1, 0);
 
 							decimalNumber = decimalNumber * 8 + digitValue;
 						}
 
-						myentryI.value.vint = decimalNumber;
+						myentryI.value.vshr = decimalNumber;
 					}
 					else
-						myentryI.value.vint = std::stoi(str);
+						myentryI.value.vshr = std::stoi(str);
 					myentryI.id[0] = 'L';
 					buffer = std::to_string(counterOfIntegerLiteral++);
 

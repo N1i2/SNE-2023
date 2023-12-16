@@ -1,9 +1,8 @@
 start
 {
-new little g;
-g = 5;
-
-output(g);
+new little a;
+a = 32000;
+output(a);
 
 return 0;
 };

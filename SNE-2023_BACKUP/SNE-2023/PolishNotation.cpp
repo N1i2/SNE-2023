@@ -98,11 +98,10 @@ bool polishNotation(int lextable_pos, LT::LexTable& lextable, IT::IdTable& idtab
 	for (int i = 0; (i < countOfAllInputLex + 1) || lextable.table[startLex + i - 1].lexema == LEX_SEMICOLON; i++)
 	{
 		if (lextable.table[startLex + i].lexema == LEX_ID)
-			if (lextable.table[startLex + i].value == LEX_LIBFUNCTION)
+			if (lextable.table[startLex + i].value == LEX_LIBFUNCTION||
+				idtable.table[lextable.table[startLex + i].idxTI].idtype == IT::F)
 				isAFunction = true;
-			else
-				if (idtable.table[lextable.table[startLex + i].idxTI].idtype == IT::F)
-					isAFunction = true;
+
 		switch (lextable.table[lextable_pos + i].lexema)
 		{
 		case LEX_LEFTTHESIS:

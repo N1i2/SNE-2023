@@ -172,7 +172,7 @@ namespace LexA
 			if ((LT::GetEntry(mylextable, mylextable.size - 1)).value == 'l')
 			{
 				iddatatype = IT::LIT;
-				myentryI.value.vint = 0;
+				myentryI.value.vshr = 0;
 			}
 			if ((LT::GetEntry(mylextable, mylextable.size - 1)).value == 't')
 			{
@@ -326,7 +326,7 @@ namespace LexA
 		myentryI.iddatatype = IT::LIT;
 		myentryI.idtype = IT::V;
 		myentryI.idxfirstLE = -1;
-		myentryI.value.vint = 0;
+		myentryI.value.vshr = 0;
 		IT::Add(myTables.myidtable, myentryI);
 
 		for (int i = 0; i < amountOfLex; i++) {
@@ -504,7 +504,7 @@ namespace LexA
 					myentryI.id[q] = buff_name[q];
 				myentryI.iddatatype = IT::LIT;
 				myentryI.idtype = IT::F;
-				myentryI.value.vint = 0;
+				myentryI.value.vshr = 0;
 				myentryI.idxfirstLE = myTables.mylextable.size;
 				IT::Add(myTables.myidtable, myentryI);
 				myentryL.idxTI = myTables.myidtable.size - 1;
@@ -587,10 +587,10 @@ namespace LexA
 							decimalNumber = decimalNumber * 8 + digitValue;
 						}
 
-						myentryI.value.vint = decimalNumber;
+						myentryI.value.vshr = decimalNumber;
 					}
 					else
-						myentryI.value.vint = std::stoi(str);
+						myentryI.value.vshr = std::stoi(str);
 					myentryI.id[0] = 'L';
 					buffer = std::to_string(counterOfIntegerLiteral++);
 

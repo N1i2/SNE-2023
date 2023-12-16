@@ -26,7 +26,12 @@ copytxt PROTO : DWORD,:DWORD
 	L3 sdword 5
 	T3 byte 'Yes', 0
 	L4 sdword 2
-	L5 sdword 0
+	L5 sdword 13
+	L6 sdword 21
+	L7 sdword 4
+	L8 sdword 2
+	L9 sdword 1
+	L10 sdword 0
 
 .data
 	buf byte 255 dup(0)
@@ -36,7 +41,13 @@ copytxt PROTO : DWORD,:DWORD
 	T1T byte 255 dup(0)
 	f04000 sdword ?
 	s04000 sdword ?
-	value04000 sdword ?
+	summa04000 sdword ?
+	raznost04000 sdword ?
+	proizv04000 sdword ?
+	delen04000 sdword ?
+	ostdelen04000 sdword ?
+	octo04000 sdword ?
+	oftext04000 sdword ?
 	tonumb04000 byte 255 dup(0)
 	T2T byte 255 dup(0)
 	T3T byte 255 dup(0)
@@ -87,27 +98,21 @@ main proc
 	pop ebx
 	add eax, ebx
 	push eax
-	pop value04000
-	push value04000
-	call outlit
+	pop summa04000
 	push f04000
 	push s04000
 	pop ebx
 	pop eax
 	sub eax, ebx
 	push eax
-	pop value04000
-	push value04000
-	call outlit
+	pop raznost04000
 	push f04000
 	push s04000
 	pop eax
 	pop ebx
 	mul ebx
 	push eax
-	pop value04000
-	push value04000
-	call outlit
+	pop proizv04000
 	push f04000
 	push s04000
 	pop ebx
@@ -117,9 +122,7 @@ main proc
 	mov edx,0
 	idiv ebx
 	push eax
-	pop value04000
-	push value04000
-	call outlit
+	pop delen04000
 	push f04000
 	push s04000
 	pop ebx
@@ -129,22 +132,30 @@ main proc
 	mov edx,0
 	idiv ebx
 	push edx
-	pop value04000
-	push value04000
-	call outlit
+	pop ostdelen04000
 	push L2
-	pop value04000
-	push value04000
-	call outlit
+	pop octo04000
 	push offset tonumb04000
 	pop edx
 	push offset tonumb04000
 	call texttolit
 	push eax
-	pop value04000
-	push value04000
+	pop oftext04000
+	push summa04000
 	call outlit
-	push value04000
+	push raznost04000
+	call outlit
+	push proizv04000
+	call outlit
+	push delen04000
+	call outlit
+	push ostdelen04000
+	call outlit
+	push octo04000
+	call outlit
+	push oftext04000
+	call outlit
+	push oftext04000
 	push L3
 	pop eax
 	pop ebx
@@ -154,16 +165,43 @@ main proc
 	call outtxt
 jmp OUTCHECK2
 CKECKNOT2 :
-	push value04000
+	push oftext04000
 	push L4
 	pop eax
 	pop ebx
 	mul ebx
 	push eax
-	pop value04000
-	push value04000
+	pop oftext04000
+	push oftext04000
 	call outlit
 OUTCHECK2 :
+	push L5
+	push L6
+	push L7
+	pop ebx
+	pop eax
+	cmp ebx,0
+	je divbyzero
+	mov edx,0
+	idiv ebx
+	push edx
+	push L8
+	push L9
+	pop eax
+	pop ebx
+	add eax, ebx
+	push eax
+	pop eax
+	pop ebx
+	mul ebx
+	push eax
+	pop ebx
+	pop eax
+	sub eax, ebx
+	push eax
+	pop summa04000
+	push summa04000
+	call outlit
 	push f04000
 	push s04000
 	pop edx
@@ -176,7 +214,7 @@ OUTCHECK2 :
 	call copytxt
 	push offset tonumb04000
 	call outtxt
-	mov eax,L5
+	mov eax,L10
 	push 0
 jmp toend
 divbyzero:

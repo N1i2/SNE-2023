@@ -37,7 +37,7 @@ namespace LT
 		file << "Num" << std::setfill(' ') << std::setw(10) << "Line" << std::setw(9) << "Lexema" << std::setw(20) << "ID in IT" << std::setw(18) << "value" << "\n\n";
 		for (int i = 0; i < lextable.size; i++)
 		{
-			file << std::setw(3) << i << std::setfill(' ') << std::setw(8) << lextable.table[i].sn + 1 <<
+			file << std::setw(3) << i << std::setfill(' ') << std::setw(8) << lextable.table[i].sn +1<<
 				std::setw(8) << lextable.table[i].lexema << std::setw(20);
 			if (lextable.table[i].idxTI != LT_TI_NULLIDX)
 				file << lextable.table[i].idxTI;

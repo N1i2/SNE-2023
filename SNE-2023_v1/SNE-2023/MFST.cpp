@@ -220,7 +220,7 @@ namespace MFST
 		{
 			errid = grebach.getRule(diagnosis[n].nrule).iderror;
 			Error::ERROR err = Error::geterror(errid);
-			sprintf_s(buf, MFST_DIAGN_MAXSIZE, "%d: строка %d, %s", err.id, lex.mylextable.table[lpos].sn, err.message);
+			sprintf_s(buf, MFST_DIAGN_MAXSIZE, "%d: строка %d, %s", err.id, lex.mylextable.table[lpos].sn+1, err.message);
 			rc = buf;
 		};
 		return rc;

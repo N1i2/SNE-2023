@@ -1,7 +1,7 @@
 text function iftest(little f, little s)
 {
 new text res;
-^f = s;
+f = s;
 	check(f = s)?
 	{
 		res = 'Yes';
@@ -37,7 +37,7 @@ raznost = f - s;
 proizv = f * s;
 delen = f / s;
 ostdelen = f % s;
-octo = !19;
+octo = !17;
 oftext = texttolit(tonumb);
 output(summa);
 output(raznost);
@@ -56,6 +56,9 @@ not
 	oftext = oftext * 2;
 	output(oftext);
 }
+
+summa = 13 - (21 % 4) * (2 + 1);
+output(summa); 
 
 tonumb = iftest(f, s);
 output(tonumb);

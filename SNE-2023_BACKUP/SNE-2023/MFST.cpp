@@ -80,7 +80,7 @@ namespace MFST
 					if ((nrulechain = rule.getNextChain(lenta[lenta_position], chain, nrulechain + 1)) >= 0)
 					{
 						MFST_TRACE1
-							savestate(filetrace);
+						savestate(filetrace);
 						st.pop();
 						push_chain(chain);
 						rc = NS_OK;
@@ -113,9 +113,7 @@ namespace MFST
 
 	bool Mfst::push_chain(GRB::Rule::Chain chain)
 	{
-		for (int k = chain.size - 1; k >= 0; k--) 
-			st.push(chain.nt[k]);
-
+		for (int k = chain.size - 1; k >= 0; k--) st.push(chain.nt[k]);
 		return true;
 	};
 
@@ -155,8 +153,7 @@ namespace MFST
 		if (rc = (k < MFST_DIAGN_NUMBER))
 		{
 			diagnosis[k] = MfstDiagnosis(lenta_position, prc_step, nrule, nrulechain);
-			for (short j = k + 1; j < MFST_DIAGN_NUMBER; j++) 
-				diagnosis[j].lenta_position = -1;
+			for (short j = k + 1; j < MFST_DIAGN_NUMBER; j++) diagnosis[j].lenta_position = -1;
 		};
 		return rc;
 	};

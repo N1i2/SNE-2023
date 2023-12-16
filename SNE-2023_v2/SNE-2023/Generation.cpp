@@ -82,7 +82,7 @@ namespace Generation
 				case IT::L:
 					buffstr += GetName(i, false);
 					if (helpIEntry.iddatatype == IT::LIT)
-						buffstr += " sdword " + std::to_string(helpIEntry.value.vint) + '\n';
+						buffstr += " sdword " + std::to_string(helpIEntry.value.vshr) + '\n';
 					if (helpIEntry.iddatatype == IT::TXT)
 					{
 						Data.Code += buffstr + "T byte 255 dup(0)\n";

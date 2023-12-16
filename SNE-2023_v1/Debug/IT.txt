@@ -12,13 +12,24 @@
   7     start       function         little             44                        0              0
   8         f       variable         little             48                        0              0 4
   9         s       variable         little             52                        0              0 4
- 10     value       variable         little             56                        0              0 4
- 11    tonumb       variable           text             60                       NV              0 4
- 12        T2        literal           text             64                      '3'              0 4
- 13        L0        literal         little             68                       13              0 4
- 14        L1        literal         little             72                        7              0 4
- 15        L2        literal         little            131                       15              0 4
- 16        L3        literal         little            154                        5              0 4
- 17        T3        literal           text            160                    'Yes'              0 4 5
- 18        L4        literal         little            169                        2              0 4 6
- 19        L5        literal         little            193                        0              0 4
+ 10     summa       variable         little             56                        0              0 4
+ 11   raznost       variable         little             60                        0              0 4
+ 12    proizv       variable         little             64                        0              0 4
+ 13     delen       variable         little             68                        0              0 4
+ 14  ostdelen       variable         little             72                        0              0 4
+ 15      octo       variable         little             76                        0              0 4
+ 16    oftext       variable         little             80                        0              0 4
+ 17    tonumb       variable           text             84                       NV              0 4
+ 18        T2        literal           text             88                      '3'              0 4
+ 19        L0        literal         little             92                       13              0 4
+ 20        L1        literal         little             96                        7              0 4
+ 21        L2        literal         little            130                       15              0 4
+ 22        L3        literal         little            178                        5              0 4
+ 23        T3        literal           text            184                    'Yes'              0 4 5
+ 24        L4        literal         little            193                        2              0 4 6
+ 25        L5        literal         little            204                       13              0 4
+ 26        L6        literal         little            205                       21              0 4
+ 27        L7        literal         little            206                        4              0 4
+ 28        L8        literal         little            208                        2              0 4
+ 29        L9        literal         little            209                        1              0 4
+ 30       L10        literal         little            238                        0              0 4

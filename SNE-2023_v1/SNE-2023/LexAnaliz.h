@@ -10,5 +10,4 @@ namespace LexA
 	};
 
 	Tables analyze(int currentLine, char* fulltextch);
-	bool checksize(std::string str);
 }

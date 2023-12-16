@@ -91,7 +91,7 @@ namespace Semantic
 					if (myTables.mylextable.table[i + 1].lexema != LEX_LEFTTHESIS)
 						if (myTables.myidtable.table[myTables.mylextable.table[i + 1].idxTI].iddatatype == IT::LIT &&
 							myTables.myidtable.table[myTables.mylextable.table[i + 1].idxTI].idtype == IT::L)
-							if (myTables.myidtable.table[myTables.mylextable.table[i + 1].idxTI].value.vint == 0)
+							if (myTables.myidtable.table[myTables.mylextable.table[i + 1].idxTI].value.vshr == 0)
 								throw ERROR_THROW_IN(2, myTables.mylextable.table[i].sn, 0);
 				}
 			}

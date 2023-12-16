@@ -74,11 +74,11 @@ namespace Log
 	{
 		if (log.stream == nullptr || !log.stream->is_open())
 		{
-			std::cout << "Ошибка " << error.id << ": " << error.message << ", строка " << error.inext.line << ", позиция " << error.inext.col << std::endl;
+			std::cout << "Ошибка " << error.id << ": " << error.message << ", строка " << error.inext.line << std::endl;
 		}
 		else
 		{
-			*log.stream << "Ошибка " << error.id << ": " << error.message << ", строка " << error.inext.line << ", позиция " << error.inext.col << std::endl;
+			*log.stream << "Ошибка " << error.id << ": " << error.message << ", строка " << error.inext.line << std::endl;
 		}
 	}
 	void Close(LOG log)

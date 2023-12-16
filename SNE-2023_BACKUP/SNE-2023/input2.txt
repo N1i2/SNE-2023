@@ -1,238 +1,113 @@
-new little x;
-
-little function sum(little w,little y,little v,little q) 
+little function sum(little w, little d) 
 {
-x = w+y+v+q;
-return x;
-}; 
-
-start 
-{
-x=1;
-x = sum(5,10,15,20);
-output(x);
-return 0;
-};
-
-
-
-new text out;
-
-text function conc(text x,text y) 
-{
-out = x+y;
-return out;
-}; 
-
-start 
-{
-out ='hello ';
-from (5) to (10)$
-{
-out = conc('Hello ', 'world');
-output(out);
-}
-return 0;
-};
-
-
-
-little function sum(little x,little y) 
-{
-new little out;
-out = x+y;
-return out;
-}; 
-
-start 
-{
-new little x;
-x=0;
-new text hello;
-from (5) to (10)$
-{
-x = sum(x,1);
-output(x);
-}
-hello ='Happy '+'New '+'Year';
-output(hello);
-return 0;
-};
-
-
-
-start 
-{
-new little x;
-x=100;
-new little y;
-new little z;
-from (10) to (0)$
-{
-y=buffer;
-z =x/y;
-output(z);
-}
-return 0;
-};
-
-
-
-
-
-new little x;
-
-little function eq(little qq,little ww)
-{
-	check ( qq = ww ) ? 
+	check(d < w)?
 	{
-		output('Numbers are equals!');
-		output(qq);
+		output('Yes');
+		w = w + d;
 	}
-	return x;
-};
+	not
+	{
+		output('No');
+		w = w - d;
+	}
+	
+	return w;
+}; 
 
 start 
 {
-	x=0;
-	from (7) to (0)$
-		{
-			x = 36/buffer;
-			x = eq(x,buffer);
-		}
+	new little x; 
+	x = texttolit('5');
+	output(x);
+	x=x+!10;
+	output(x);
+
+	new little o;
+	new little j;
+	j = 14;
+	o = sum(x, j);
+	output(o);
+
 	return 0;
 };
 
-
-
-
-new little x;
-
-little function show(little u) 
-{
-new text spam;
-spam = 'SPAM '+' spam '+' SPAM';
-output(spam);
-return 0;
-}; 
+////////////////////////////
 
 start 
 {
-from(0)to(999)$ 
-{
-x = show(x);
-}
-return 0;
+	new little x; 
+	new text h;
+	h = '5';
+	x = texttolit(h);
+	output(x);
+	x= x + !10;
+	output(x);
+	return 0;
 };
-
-
-
-
-
-new text out;
-new little x;
-
-little function show(little u) 
+///////////////////////////
+text function iftest(little f, little s)
 {
-out = ' ';
-from(0)to(u)$ 
-{
-out = out + '*';
-}
-output(out);
-return 0;
-}; 
+new text res;
+f = s;
+	check(f = s)?
+	{
+		res = 'Yes';
+	}
+	not
+	{
+		res = 'No';
+	}
+
+return res;
+};
 
 start 
 {
-from(1)to(10)$ 
-{
-x = buffer;
-x = show(x);
-}
-out = ' ';
-from(10)to(1)$ 
-{
-x = buffer;
-x = show(x);
-}
-return 0;
-};
+new little f;
+new little s;
+new little summa;
+new little raznost;
+new little proizv;
+new little delen;
+new little ostdelen;
+new little octo;
+new little oftext;
 
+new text tonumb;
+tonumb = '3';
 
+f = 13;
+s = 7;
 
+summa = f + s;
+raznost = f - s;
+proizv = f * s;
+delen = f / s;
+ostdelen = f % s;
+octo = !17;
+oftext = texttolit(tonumb);
+output(summa);
+output(raznost);
+output(proizv);
+output(delen);
+output(ostdelen);
+output(octo);
+output(oftext);
 
-little function ch(little x)
+check(oftext > 5)?
 {
-check(buffer=5)?
-{
-output('Yes');
+	output('Yes');
 }
 not
 {
-output('No');
-buffer = buffer + 1;
-x = ch(x);
+	oftext = oftext * 2;
+	output(oftext);
 }
+
+summa = 13 - (21 % 4) * (2 + 1);
+output(summa); 
+
+tonumb = iftest(f, s);
+output(tonumb);
 return 0;
-};
-
-start 
-{
-new little x; 
-buffer = 0;
-x = 0;
-buffer = ch(x);
-return 0;
-};
-
-
-
-
-new text out;	
-new little x;
-new little sum;
-
-little function addn()
-{
-	x = textlenght(out) -1 ;
-	return x;
-};
-
-little function show(little u) 
-{
-	out = ' ';
-	x = u % 2;
-	from(0)to(u)$ 
-	{
-		check(x = 0)?
-		{
-			out = out + '@';
-		}
-		not
-		{
-			out = out + '*';
-		}
-	}
-	x = addn();
-	sum = sum + x;
-	output(out);
-	output(x);
-	return 0;
-}; 
-
-start 
-{
-	from(1)to(9)$ 
-	{
-		x = show(buffer);
-	}
-	from(9)to(1)$ 
-	{
-		x = show(buffer);
-	}
-	output(' ');
-	output('Sum');
-	output(sum);
-	return 0;
 };

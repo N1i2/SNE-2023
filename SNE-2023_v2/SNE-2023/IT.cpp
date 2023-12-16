@@ -138,7 +138,7 @@ namespace IT
 				}
 			else {
 				if (iddatatype == 1)
-					file << idtable.table[i].value.vint;
+					file << idtable.table[i].value.vshr;
 				else
 					file << idtable.table[i].value.vstr.str;
 			}

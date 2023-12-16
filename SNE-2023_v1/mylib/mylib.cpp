@@ -22,7 +22,8 @@ extern "C"
 		return result;
 	}
 
-	int _stdcall textlenght(char* str1) {
+	int _stdcall textlenght(char* str1) 
+	{
 		int i=0;
 		while (*(str1 + i) != NULL)
 		{

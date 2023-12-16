@@ -8,7 +8,7 @@
 
 namespace IT			// таблица идентификаторов
 {
-	enum IDDATATYPE { LIT = 1, TXT = 2 /*,SHR =3 */,Err=0};			// типы данных идентификаторов: integer, string
+	enum IDDATATYPE { LIT = 1, TXT = 2, Err=0};			// типы данных идентификаторов: integer, string
 	enum IDTYPE { V = 1, F = 2, P = 3, L = 4, E = 0 };	// типы идентификаторов: переменная, функция, параметр, литерал
 
 	struct Entry	// строка таблицы идентификаторов
@@ -20,8 +20,7 @@ namespace IT			// таблица идентификаторов
 		IDTYPE		idtype;				// тип идентификатора
 		union
 		{
-			int vint;					// значение integer
-			short vshr;					// значение integer
+			short vshr;					// значение shert
 			struct
 			{
 				int len;						// количество символов в string

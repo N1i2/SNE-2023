@@ -104,8 +104,12 @@ not
 	output(oftext);
 }
 
-summa = 13 + (7 - 4) * 3;
+summa = 13 - (21 % 4) * (2 + 1);
 output(summa); 
+
+tonumb = '15';
+summa = textlenght(tonumb)*2;
+output(summa);
 
 tonumb = iftest(f, s);
 output(tonumb);

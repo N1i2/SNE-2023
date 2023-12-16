@@ -20,7 +20,6 @@ namespace IT
 		IDTYPE		idtype;
 		union
 		{
-			int vint;
 			short vshr;
 			struct
 			{
