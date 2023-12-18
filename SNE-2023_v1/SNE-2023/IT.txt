@@ -5,4 +5,7 @@
   0    buffer       variable         little             -1                        0              0
   1     start       function         little              0                        0              0
   2         j       variable         little              4                        0              0 1
-  3        L0        literal         little              7                        0              0 1
+  3        L0        literal         little              8                       10              0 1
+  4        L1        literal         little             14                       20              0 1
+  5        T0        literal           text             20                   'hbjx'              0 1 2
+  6        L2        literal         little             25                        0              0 1

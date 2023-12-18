@@ -1,6 +1,12 @@
 start
 {
-new little j;
+	new little j;
+	j = 10;
+
+	check(j < 20)?
+	{
+		output('hbjx');
+	}
 
 return 0;
 };

@@ -1,5 +1,5 @@
 Тест Без ошибок
----- Протокол ------- Дата: 18.12.2023 10:55:31
+---- Протокол ------- Дата: 18.12.2023 22:59:49
 ---- Параметры -------
 -log: input.log
 -out: E:\универ\КПО\kursach\SNE-2023_v1\Debug\SNE-2023.exe.asm
@@ -16,11 +16,29 @@ Num      Line   Lexema            ID in IT             value
   3       3       t                                       l
   4       3       i                   2                    
   5       3       ;                                        
-  6       5       r                                        
-  7       5       l                   3                    
-  8       5       ;                                        
-  9       6       }                                        
- 10       6       ;                                        
+  6       4       i                   2                    
+  7       4       =                                        
+  8       4       l                   3                    
+  9       4       ;                                        
+ 10       6       c                                        
+ 11       6       (                                        
+ 12       6       i                   2                    
+ 13       6       y                                       <
+ 14       6       l                   4                    
+ 15       6       )                                        
+ 16       6       ?                                       ?
+ 17       7       {                                        
+ 18       8       o                                        
+ 19       8       (                                        
+ 20       8       l                   5                    
+ 21       8       )                                        
+ 22       8       ;                                        
+ 23       9       }                                        
+ 24      11       r                                        
+ 25      11       l                   6                    
+ 26      11       ;                                        
+ 27      12       }                                        
+ 28      12       ;                                        
                   
 
 ===========LEX TABLE mini==============
@@ -28,6 +46,12 @@ Num      Line   Lexema            ID in IT             value
 
 s{
 nti;
+i=l;
+
+c(iyl)?
+{
+o(l);
+}
 
 rl;
 };
@@ -39,18 +63,29 @@ rl;
   0    buffer       variable         little             -1                        0              0
   1     start       function         little              0                        0              0
   2         j       variable         little              4                        0              0 1
-  3        L0        literal         little              7                        0              0 1
+  3        L0        literal         little              8                       10              0 1
+  4        L1        literal         little             14                       20              0 1
+  5        T0        literal           text             20                   'hbjx'              0 1 2
+  6        L2        literal         little             25                        0              0 1
 
 
 
 
 0   : S->s{N};            
 2   : N->nti;N            
-6   : N->rU;              
-7   : U->l                
+6   : N->i=E;N            
+8   : E->l                
+10  : N->c(UCU)?{N}N      
+12  : U->i                
+13  : C->y                
+14  : U->l                
+18  : N->o(U);            
+20  : U->l                
+24  : N->rU;              
+25  : U->l                
 
 
 ======= Исходные данные =====
-Количество символов: 31
+Количество символов: 76
 Проигнорировано:     0
-Количество строк:    6
+Количество строк:    12

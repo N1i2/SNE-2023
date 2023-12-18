@@ -1,3 +1,28 @@
+little function viv(little numb)
+{
+	check(numb < 5)?
+	{
+		output('Yes');
+	}
+	not
+	{
+		numb = numb - 1;
+		output('No');
+		numb = viv(numb);
+	}
+	return numb;
+};
+start
+{
+	new little h;
+	h = 8;
+	h = viv(h);
+	output(h);
+	return 0;
+};
+
+///////////////////////////////////
+
 little function sum(little w, little d) 
 {
 	check(d < w)?

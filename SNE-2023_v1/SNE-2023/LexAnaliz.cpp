@@ -475,8 +475,10 @@ namespace LexA
 					throw ERROR_THROW_IN(117, currentLine, 0);
 			}
 
+			int j = standartFunction->size();
+
 			isAStandartFunction = false;
-			for (int i = 0; i < standartFunction->size(); i++)
+			for (int i = 0; i < 2; i++)
 			{
 				if (str == standartFunction[i])
 					isAStandartFunction = true;
@@ -565,8 +567,6 @@ namespace LexA
 					if (!FST::literalInt((char*)str.c_str()))
 						throw ERROR_THROW_IN(113, currentLine, 0);
 
-					
-
 					if (str[0] == '!')
 					{
 						int decimalNumber = 0;
@@ -601,7 +601,6 @@ namespace LexA
 						myentryI.id[i + 1] = NULL;
 
 					myentryI.iddatatype = IT::LIT;
-
 				}
 				myentryI.idtype = IT::L;
 				IT::Add(myTables.myidtable, myentryI);

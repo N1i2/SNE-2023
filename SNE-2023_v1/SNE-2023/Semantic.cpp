@@ -141,10 +141,10 @@ namespace Semantic
 						counter++;
 					}
 				}
-				if (neededParams != 0)
-					throw ERROR_THROW_IN(156, myTables.mylextable.table[i].sn, 0);
 				if (counter > 8)
 					throw ERROR_THROW_IN(162, myTables.mylextable.table[i].sn, 0);
+				if (neededParams != 0)
+					throw ERROR_THROW_IN(156, myTables.mylextable.table[i].sn, 0);
 			}
 
 
@@ -191,10 +191,14 @@ namespace Semantic
 					myTables.mylextable.table[i].lexema != LEX_START)
 				{
 					int k = i;
+					
 					int counterMain = 0;
 					int counterObs = 0;
 					IT::IDDATATYPE* typeParamMainFunc = new IT::IDDATATYPE[8];
 					IT::IDDATATYPE* typeParamObsFunc = new IT::IDDATATYPE[8];
+
+					if(myTables.mylextable.table[k+1].lexema != LEX_LEFTTHESIS)
+						throw ERROR_THROW_IN(158, myTables.mylextable.table[i].sn, 0);
 
 					for (int q = 0; q < 8; q++)
 					{
