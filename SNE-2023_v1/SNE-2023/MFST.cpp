@@ -180,9 +180,7 @@ namespace MFST
 			break;
 		case NS_NORULE:			MFST_TRACE4("------>NS_NURULE")
 			filetrace << "--------------------------------------------------------------------------" << std::endl;
-			filetrace << getDiagnosis(0, buf) << std::endl;
-			filetrace << getDiagnosis(1, buf) << std::endl;
-			filetrace << getDiagnosis(2, buf) << std::endl;
+			filetrace << getDiagnosis(buf) << std::endl;
 			break;
 		case NS_NORULECHAIN:	MFST_TRACE4("------>NS_NURULENORULECHAIN") break;
 		case NS_ERROR:			MFST_TRACE4("------>NS_ERROR") break;
@@ -211,14 +209,14 @@ namespace MFST
 		return buf;
 	};
 
-	char* Mfst::getDiagnosis(short n, char* buf)
+	char* Mfst::getDiagnosis( char* buf)
 	{
 		char* rc = (char*)"";
 		int errid = 0;
 		int lpos = -1;
-		if (n < MFST_DIAGN_NUMBER && (lpos = diagnosis[n].lenta_position) >= 0)
+		if ((lpos = diagnosis[0].lenta_position) >= 0)
 		{
-			errid = grebach.getRule(diagnosis[n].nrule).iderror;
+			errid = grebach.getRule(diagnosis[0].nrule).iderror;
 			Error::ERROR err = Error::geterror(errid);
 			sprintf_s(buf, MFST_DIAGN_MAXSIZE, "%d: строка %d, %s", err.id, lex.mylextable.table[lpos].sn+1, err.message);
 			rc = buf;

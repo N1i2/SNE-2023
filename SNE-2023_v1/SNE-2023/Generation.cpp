@@ -56,7 +56,6 @@ namespace Generation
 
 		IT::Entry helpIEntry;
 
-
 		Proto = "\nExitProcess PROTO : DWORD\nouttxt PROTO : DWORD\noutlit PROTO : SDWORD\nsleep PROTO\ntextlenght PROTO : DWORD\ntexttolit PROTO : DWORD\ncopytxt PROTO : DWORD,:DWORD\n";
 		Data.Code += "\tbuf byte 255 dup(0)\n";
 		Const.Code += "\tmesdivbyzero byte 'Divide by zero',0\n";

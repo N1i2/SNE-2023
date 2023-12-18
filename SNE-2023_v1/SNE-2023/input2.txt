@@ -45,10 +45,12 @@ start
 	return 0;
 };
 ///////////////////////////
+
 text function iftest(little f, little s)
 {
 new text res;
 f = s;
+buffer = 4;
 	check(f = s)?
 	{
 		res = 'Yes';
@@ -93,6 +95,8 @@ output(delen);
 output(ostdelen);
 output(octo);
 output(oftext);
+buffer = 2;
+output(buffer);
 
 check(oftext > 5)?
 {
@@ -112,6 +116,7 @@ summa = textlenght(tonumb)*2;
 output(summa);
 
 tonumb = iftest(f, s);
+output(buffer);
 output(tonumb);
 return 0;
 };

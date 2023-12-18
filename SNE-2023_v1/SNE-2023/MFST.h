@@ -88,7 +88,7 @@ namespace MFST
 		Mfst(LexA::Tables plex, GRB::Greibach pgrebach);
 		char* getCSt(char* buf);
 		char* getCLenta(char* buf, short pos, short n = 25);
-		char* getDiagnosis(short n, char* buf);
+		char* getDiagnosis(char* buf);
 		bool savestate(std::ofstream& log);
 		bool reststate(std::ofstream& log);
 		bool push_chain(GRB::Rule::Chain chain);

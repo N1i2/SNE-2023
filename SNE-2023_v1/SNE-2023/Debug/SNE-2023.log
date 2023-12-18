@@ -1,41 +1,8 @@
-﻿  pch.cpp
-  Error.cpp
-E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\Error.cpp(83,3): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "ERROR_ENTRY_NODEF"
-  FST.cpp
-E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\FST.cpp(284,17): warning C4267: инициализация: преобразование из "size_t" в "short"; возможна потеря данных
-  FilesManager.cpp
-  Generation.cpp
-E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\Generation.cpp(209,80): warning C4129: p: неизвестная escape-последовательность
-  Greibach.cpp
-  IT.cpp
-  In.cpp
-E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\In.cpp(67,21): warning C4018: <: несоответствие типов со знаком и без знака
-  LT.cpp
-  LexAnaliz.cpp
-E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\LexAnaliz.cpp(125,49): warning C4018: <: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\LexAnaliz.cpp(187,22): warning C4018: <: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\LexAnaliz.cpp(218,33): warning C4018: <: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\LexAnaliz.cpp(479,22): warning C4018: <: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\LexAnaliz.cpp(485,22): warning C4018: <: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\LexAnaliz.cpp(488,7): warning C4018: >=: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\LexAnaliz.cpp(490,22): warning C4018: <: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\LexAnaliz.cpp(492,23): warning C4018: >=: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\LexAnaliz.cpp(551,24): warning C4018: <: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\LexAnaliz.cpp(553,33): warning C4018: >=: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\LexAnaliz.cpp(557,24): warning C4018: <: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\LexAnaliz.cpp(559,37): warning C4018: >=: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\LexAnaliz.cpp(597,24): warning C4018: <: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\LexAnaliz.cpp(600,37): warning C4018: >=: несоответствие типов со знаком и без знака
-E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\LexAnaliz.cpp(665,25): warning C4018: <: несоответствие типов со знаком и без знака
-  Log.cpp
-  MFST.cpp
-E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\MFST.cpp(247,66): warning C4267: =: преобразование из "size_t" в "short"; возможна потеря данных
-  Main.cpp
+﻿  MFST.cpp
+E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\MFST.cpp(245,66): warning C4267: =: преобразование из "size_t" в "short"; возможна потеря данных
   Parm.cpp
-  PolishNotation.cpp
   Semantic.cpp
 E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\Semantic.cpp(63,23): warning C4018: <: несоответствие типов со знаком и без знака
 E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\Semantic.cpp(8,7): warning C4101: k: неиспользованная локальная переменная
   Создание кода...
-E:\универ\КПО\kursach\SNE-2023_v1\SNE-2023\PolishNotation.cpp(37): warning C4715: findOperator: значение возвращается не при всех путях выполнения
   SNE-2023.vcxproj -> E:\универ\КПО\kursach\SNE-2023_v1\Debug\SNE-2023.exe
