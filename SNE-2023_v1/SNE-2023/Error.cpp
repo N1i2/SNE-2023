@@ -66,7 +66,7 @@ namespace Error
 		ERROR_ENTRY(164,"SEMANTICS:   операндам типа text не примен€ютс€ операторы"),
 		ERROR_ENTRY(165,"SEMANTICS: ¬ложенные циклы не поддерживаютс€"),
 		ERROR_ENTRY(166,"SEMANTICS: ѕараметры условного оператора должны быть числового типа"),
-		ERROR_ENTRY_NODEF(167),
+		ERROR_ENTRY(167,"SEMANTICS: Ќевозможно преобразовать строку в число"),
 		ERROR_ENTRY_NODEF(168),
 		ERROR_ENTRY_NODEF(169),
 		ERROR_ENTRY_NODEF(170),

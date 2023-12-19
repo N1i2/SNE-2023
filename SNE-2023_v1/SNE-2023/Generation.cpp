@@ -87,8 +87,13 @@ namespace Generation
 					{
 						Data.Code += buffstr + "T byte 255 dup(0)\n";
 						buffstr += " byte ";
-						for (int k = 0; k < helpIEntry.value.vstr.len; k++)
-							buffstr += helpIEntry.value.vstr.str[k];
+						if (helpIEntry.value.vstr.len == 2 && helpIEntry.value.vstr.str[0] == '\'')
+							buffstr += "\' \'";
+						else
+						{
+							for (int k = 0; k < helpIEntry.value.vstr.len; k++)
+								buffstr += helpIEntry.value.vstr.str[k];
+						}
 						buffstr += ", 0\n";
 					}
 					Const.Code += buffstr;

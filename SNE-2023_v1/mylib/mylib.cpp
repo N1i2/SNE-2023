@@ -14,20 +14,22 @@ extern "C"
 
 	int _stdcall texttolit(char* str1)
 	{
+		if (str1 == "" || str1 == " ")
+			return 0;
+
 		int result = 0;
 
 		for (int i = 0; str1[i] != '\0'; ++i)
 			result = result * 10 + str1[i] - '0';
-
 		return result;
 	}
 
-	int _stdcall textlenght(char* str1) 
+	int _stdcall textlenght(char* str1)
 	{
-		int i=0;
+		int i = 0;
 		while (*(str1 + i) != NULL)
 		{
-			
+
 			i++;
 		}
 		return i;
