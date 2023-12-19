@@ -74,9 +74,8 @@ namespace Generation
 					if (helpIEntry.iddatatype == IT::LIT)
 						buffstr += " sdword ?\n";
 					if (helpIEntry.iddatatype == IT::TXT)
-					{
 						buffstr += " byte 255 dup(0)\n";
-					}
+
 					Data.Code += buffstr;
 					break;
 				case IT::L:
@@ -161,35 +160,24 @@ namespace Generation
 			{
 			case LEX_RIGHTBRACE:
 				counter--;
-				if (IsCycle)
-					if (counter == numbOfBracesCyc)
+				if (counter == numbOfBracesChc)
+				{
+					if (lextable.table[i + 1].lexema != LEX_NOT)
 					{
-						IsCycle = false;
-						buffstr += "\tmov eax,cycleisneg" + std::to_string(countOfCycles - 1) + "\n\tcmp eax,0\n\tje iter" + std::to_string(countOfCycles - 1) +
-							"\n\tsub buffer00000,1\n\tjmp enditer" + std::to_string(countOfCycles - 1) + "\niter" + std::to_string(countOfCycles - 1) + ":\n" +
-							"\tadd buffer00000,1\n\tenditer" + std::to_string(countOfCycles - 1) + ":\njmp " + (std::string)ASMCYCLE + std::to_string(countOfCycles - 1) + '\n' +
-							(std::string)ASMCYCLEOUT + std::to_string(countOfCycles - 1) + ":\n";
-					}
-				if (IsCheck)
-					if (counter == numbOfBracesChc)
-					{
-						if (lextable.table[i + 1].lexema != LEX_NOT)
-						{
-							if (thereisnot == false)
-								buffstr += (std::string)ASMCHECKNOT + std::to_string(countOfChecks - 1) + " :\n";
-
-							else
-								buffstr += (std::string)ASMCHECK + std::to_string(countOfChecks - 1) + " :\n";
-
-							IsCheck = thereisnot = false;
-						}
-						else
-						{
-							thereisnot = true;
-							buffstr += "jmp " + (std::string)ASMCHECK + std::to_string(countOfChecks - 1) + "\n";
+						if (thereisnot == false)
 							buffstr += (std::string)ASMCHECKNOT + std::to_string(countOfChecks - 1) + " :\n";
-						}
+						else
+							buffstr += (std::string)ASMCHECK + std::to_string(countOfChecks - 1) + " :\n";
+
+						IsCheck = thereisnot = false;
 					}
+					else
+					{
+						thereisnot = true;
+						buffstr += "jmp " + (std::string)ASMCHECK + std::to_string(countOfChecks - 1) + "\n";
+						buffstr += (std::string)ASMCHECKNOT + std::to_string(countOfChecks - 1) + " :\n";
+					}
+				}
 				break;
 			case LEX_LEFTBRACE:
 				counter++;
@@ -201,16 +189,6 @@ namespace Generation
 			case LEX_CHECK:
 				IsCheckForIDAndLITERALS = IsCheck = true;
 				numbOfBracesChc = counter;
-				break;
-			case LEX_ENDCONDCYCL:
-				IsCycleForIDAndLITERALS = false;
-				buffstr += "\tpop eax\n\tpop ebx\n\tmov edx,eax\n\tsub eax,ebx\n\tcmp eax,0\n\tjl negative" + std::to_string(countOfCycles) + "\n" +
-					"\tmov buffer00000,ebx\n\tmov ecx,eax\n\tmov eax,0\n\tmov cycleisneg" + std::to_string(countOfCycles) +
-					",eax\n\tjmp endcondcycle" + std::to_string(countOfCycles) +
-					"\nnegative" + std::to_string(countOfCycles) + " :\n\tmov buffer00000,ebx\n\tneg eax\n\tmov ecx,eax\n\tadd ecx,1\n" +
-					"\tmov eax,1\n\tmov cycleisneg" + std::to_string(countOfCycles) + ",eax\nendcondcycle" + std::to_string(countOfCycles) + " :\n\tpush ecx\n";
-				Data.Code += "\tcycleisneg" + std::to_string(countOfCycles) + " dword 0\n";
-				buffstr += (std::string)ASMCYCLE + std::to_string(countOfCycles++) + ":" + "\pop ecx\n\tcmp ecx,0\nje " + (std::string)ASMCYCLEOUT + std::to_string(countOfCycles - 1) + "\n\tsub ecx,1\n\tmov buffer00000,ecx\n\tpush ecx\n";
 				break;
 			case LEX_ENDCHECK:
 				buffstr += "\tpop eax\n\tpop ebx\n\tcmp eax,ebx\n";
@@ -309,11 +287,13 @@ namespace Generation
 					case POLISHFUNCTION:
 					{
 						int j = i + 1;
-						std::string x = ""; x += lextable.table[i + 1].lexema;
+						std::string x = "";
+						x += lextable.table[i + 1].lexema;
 						std::stack<std::string> temp;
 						std::string buf;
 						std::string mainstacktop;
 						int numbOfParameters = atoi(x.c_str());
+
 						for (j = 0; j < numbOfParameters; j++)
 						{
 							buffstr += "\tpop edx\n";
@@ -367,7 +347,7 @@ namespace Generation
 						}
 						case '+':
 						{
-								buffstr += "\tpop eax\n\tpop ebx\n\tadd eax, ebx\n\tpush eax\n";
+							buffstr += "\tpop eax\n\tpop ebx\n\tadd eax, ebx\n\tpush eax\n";
 							break;
 						}
 						case '-':

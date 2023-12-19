@@ -1,75 +1,9 @@
-
-text function iftest(little f, little s)
+start
 {
-new text res;
-f = s;
-buffer = 4;
-	check(f = s)?
-	{
-		res = 'Yes';
-	}
-	not
-	{
-		res = 'No';
-	}
-
-return res;
-};
-
-start 
-{
+new little g;
 new little f;
-new little s;
-new little summa;
-new little raznost;
-new little proizv;
-new little delen;
-new little ostdelen;
-new little octo;
-new little oftext;
+g = 2 - 1;
+f = 4 / g;
 
-new text tonumb;
-tonumb = '3';
-
-f = 13;
-s = 7;
-
-summa = f + s;
-raznost = f - s;
-proizv = f * s;
-delen = f / s;
-ostdelen = f % s;
-octo = !17;
-oftext = texttolit(tonumb);
-output(summa);
-output(raznost);
-output(proizv);
-output(delen);
-output(ostdelen);
-output(octo);
-output(oftext);
-buffer = 2;
-output(buffer);
-
-check(oftext > 5)?
-{
-	output('Yes');
-}
-not
-{
-	oftext = oftext * 2;
-	output(oftext);
-}
-
-summa = 13 - (21 % 4) * (2 + 1);
-output(summa); 
-
-tonumb = '15';
-summa = textlenght(tonumb)*2;
-output(summa);
-
-tonumb = iftest(f, s);
-output(buffer);
-output(tonumb);
 return 0;
-};
+}
